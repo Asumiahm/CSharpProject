@@ -40,7 +40,7 @@ public class Stopwatch
     }
 public void Reset()
 {
-        Stop(); 
+        isRunning = false; //I made this since real world stopwatche, stops before reset and also doesnt start untill cliked strat ow 
         TimeElapsed = TimeSpan.Zero;
         OnReset?.Invoke("Stopwatch Reset!");
         Console.WriteLine($"Time Elapsed: {TimeElapsed}"); 

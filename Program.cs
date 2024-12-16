@@ -29,7 +29,7 @@ Console.Clear();
             switch (char.ToUpper(input))
             {
                 case 'S':
-                    Task.Run(() => stopwatch.Start());
+                    Task.Run(() => stopwatch.Start());//since others started freezing if one key is cliked, then separate the thread
                     break;
                 case 'T':
                     stopwatch.Stop();
