@@ -7,19 +7,19 @@ class Program
     {
         var stopwatch = new Stopwatch();
 
-        // Subscribe to events
         stopwatch.OnStarted += DisplayMessage;
         stopwatch.OnStopped += DisplayMessage;
         stopwatch.OnReset += DisplayMessage;
 Console.Clear();
         Console.WriteLine("===============================================");
-        Console.WriteLine("            🕒 Console Stopwatch App 🕒         ");
+        Console.WriteLine("          Console Stopwatch App          ");
         Console.WriteLine("===============================================\n");
         Console.WriteLine("-----------------------------------------------");
-        Console.WriteLine("  ▶ Press 'S' to Start the stopwatch.");
-        Console.WriteLine("  ⏹ Press 'T' to Stop the stopwatch.");
-        Console.WriteLine("  🔄 Press 'R' to Reset the stopwatch.");
-        Console.WriteLine("  ❌ Press 'Q' to Quit the application.");
+        Console.WriteLine("  Press 'S' to Start the stopwatch.");
+        Console.WriteLine("  Press 'T' to Stop the stopwatch.");
+        Console.WriteLine("  Press 'R' to Reset the stopwatch.");
+        //added rather than clicking ctrl+c everytime
+        Console.WriteLine("  Press 'Q' to Quit the application.");
         Console.WriteLine("-----------------------------------------------\n");
 
         while (true)
@@ -29,7 +29,6 @@ Console.Clear();
             switch (char.ToUpper(input))
             {
                 case 'S':
-                    // Run Start method on a new thread
                     Task.Run(() => stopwatch.Start());
                     break;
                 case 'T':
@@ -37,13 +36,13 @@ Console.Clear();
                     break;
                 case 'R':
                     stopwatch.Reset();
-                    Console.WriteLine(); // Move to the next line
+                    Console.WriteLine(); 
                     break;
                 case 'Q':
                     Console.WriteLine(".........Quitting the app.");
                     return;
                 default:
-                    Console.WriteLine("⚠ Invalid input. Please press 'S', 'T', 'R', or 'Q'");
+                    Console.WriteLine("Invalid input. Please press 'S', 'T', 'R', or 'Q'");
                     break;
             }
         }
