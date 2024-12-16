@@ -14,5 +14,5 @@ A simple **console application** written in **C#** to simulate a stopwatch. This
 - ✅ Event messages when the stopwatch starts, stops, or resets  
 - ✅ User-friendly command-line interface
 
-Done by [Asumiahm](Asumiahm)
+For modularization I have created two cs files, Program.cs and Stopwatch.cs
 
